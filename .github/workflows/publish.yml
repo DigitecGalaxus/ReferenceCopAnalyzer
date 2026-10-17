@@ -10,10 +10,10 @@ jobs:
     name: build, pack & publish
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@0717577d45739eb3c851188b29f50ed6c0b2194e # v2
 
       - name: Setup dotnet
-        uses: actions/setup-dotnet@v1
+        uses: actions/setup-dotnet@871f041373faaad213a635d9afb62905ec029bbb # v1
         with:
           dotnet-version: 5.0.203
 
@@ -23,7 +23,7 @@ jobs:
       # Publish
       - name: publish on version change
         id: publish_nuget
-        uses: rohith/publish-nuget@v2
+        uses: rohith/publish-nuget@c12b8546b67672ee38ac87bea491ac94a587f7cc # v2
         with:
           # Filepath of the project to be packaged, relative to root of repository
           PROJECT_FILE_PATH: ReferenceCopAnalyzer/ReferenceCopAnalyzer/ReferenceCopAnalyzer.csproj
